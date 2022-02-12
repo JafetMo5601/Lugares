@@ -63,7 +63,7 @@ dependencies {
     kapt "androidx.room:room-compiler:2.4.1"
     implementation 'androidx.room:room-ktx:2.4.1'
 
-    implementation 'androidx.navegation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navegation:navigation-fragment-ktx:2.4.0'
     implementation 'androidx.navegation:navigation-ui-ktx:2.4.1'
     implementation 'androidx.navegation:dynamic-features-fragment:2.4.1'
 
