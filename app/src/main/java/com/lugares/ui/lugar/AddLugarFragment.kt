@@ -6,24 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.lugares.R
 import com.lugares.databinding.FragmentAddLugarBinding
 import com.lugares.model.Lugar
+import com.lugares.view_models.LugarViewModel
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class AddLugarFragment : Fragment() {
-
+    private lateinit var lugarViewModel: LugarViewModel
     private var _binding: FragmentAddLugarBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?,
+        savedInstanceState: Bundle?
     ): View {
+        lugarViewModel =
+            ViewModelProvider(this)[LugarViewModel::class.java]
         _binding = FragmentAddLugarBinding.inflate(inflater, container, false)
+
+        binding.btAdd.setOnClickListener {
+            addLugar()
+        }
 
         return binding.root
     }
@@ -37,27 +46,15 @@ class AddLugarFragment : Fragment() {
             var web = binding.etWebSite.text.toString()
             var lugar = Lugar(0, name, email, phone, web, 0.0, 0.0, 0.0, "", "")
             lugarViewModel.addLugar(lugar)
-            Toast.makeText(requireContext(), getString(R.string.msg))
+            Toast.makeText(requireContext(), getString(R.string.msg_added), Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(requireContext(), getString(R.string.msg_missing_data), Toast.LENGTH_LONG).show()
         }
+        findNavController().navigate(R.id.action_addLugarFragment_to_nav_lugar)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AddLugarFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AddLugarFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
