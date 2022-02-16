@@ -14,19 +14,19 @@ abstract class LugarDatabase: RoomDatabase() {
         private var INSTANCE: LugarDatabase? = null
 
         fun getDatabase(context: android.content.Context): LugarDatabase {
-            var instance = INSTANCE
+            var tempInstance = INSTANCE
 
-            if (instance != null) {
-             return instance
+            if (tempInstance != null) {
+             return tempInstance
             }
             synchronized(this) {
-                val basedata = Room.databaseBuilder(
+                val instance = Room.databaseBuilder(
                     context.applicationContext,
                     LugarDatabase::class.java,
                     "lugar_database"
                 ).build()
-                INSTANCE = basedata
-                return basedata
+                INSTANCE = instance
+                return instance
             }
 
         }

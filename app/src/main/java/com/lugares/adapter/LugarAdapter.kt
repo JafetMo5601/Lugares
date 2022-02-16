@@ -12,13 +12,13 @@ class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
     private var listLugares = emptyList<Lugar>()
 
     inner class LugarViewHolder(private val itemBinding: LugarRowBinding):
-            RecyclerView.ViewHolder(itemBinding.root) {
-                fun bind(lugar: Lugar) {
-                    itemBinding.tvPhone.text = lugar.phone
-                    itemBinding.tvEmail.text = lugar.email
-                    itemBinding.tvName.text = lugar.name
-                }
+        RecyclerView.ViewHolder(itemBinding.root) {
+            fun bind(lugar: Lugar) {
+                itemBinding.tvPhone.text = lugar.phone
+                itemBinding.tvEmail.text = lugar.email
+                itemBinding.tvName.text = lugar.name
             }
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LugarViewHolder {
         val itemBinding = LugarRowBinding.inflate(LayoutInflater.from(parent.context), parent, false)

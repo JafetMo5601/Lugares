@@ -23,9 +23,8 @@ class LugarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         lugarViewModel =
-            ViewModelProvider(this)[LugarViewModel::class.java]
+            ViewModelProvider(this).get(LugarViewModel::class.java)
         _binding = FragmentLugarBinding.inflate(inflater, container, false)
-
         binding.fbAdd.setOnClickListener {
             findNavController().navigate(R.id.action_nav_lugar_to_addLugarFragment)
         }

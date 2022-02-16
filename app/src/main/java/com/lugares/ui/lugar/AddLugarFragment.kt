@@ -14,21 +14,18 @@ import com.lugares.model.Lugar
 import com.lugares.view_models.LugarViewModel
 
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
 class AddLugarFragment : Fragment() {
-    private lateinit var lugarViewModel: LugarViewModel
     private var _binding: FragmentAddLugarBinding? = null
     private val binding get() = _binding!!
+    private lateinit var lugarViewModel: LugarViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        lugarViewModel =
-            ViewModelProvider(this)[LugarViewModel::class.java]
         _binding = FragmentAddLugarBinding.inflate(inflater, container, false)
+        lugarViewModel =
+            ViewModelProvider(this).get(LugarViewModel::class.java)
 
         binding.btAdd.setOnClickListener {
             addLugar()

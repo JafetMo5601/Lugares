@@ -19,6 +19,4 @@ class LugarRepository(private val lugarDao: LugarDao) {
     suspend fun deleteLugar(lugar: Lugar) {
         lugarDao.deleteLugar(lugar)
     }
-
-
 }
