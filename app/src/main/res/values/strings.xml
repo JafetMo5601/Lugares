@@ -21,6 +21,12 @@
     <string name="msg_phone">Phone (9999-9999)</string>
     <string name="msg_web">Web Site</string>
     <string name="msg_added">Lugar Added</string>
+    <string name="msg_updated">Lugar Updated</string>
     <string name="msg_missing_data">Missing Data</string>
     <string name="bt_add">Add</string>
+    <string name="bt_update">Update</string>
+    <string name="menu_delete">Delete Lugar</string>
+    <string name="yes">yes</string>
+    <string name="msg_sure_delete">Are you sure of delete </string>
+    <string name="no">No</string>
 </resources>
