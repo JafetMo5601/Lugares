@@ -29,4 +29,18 @@
     <string name="yes">yes</string>
     <string name="msg_sure_delete">Are you sure of delete </string>
     <string name="no">No</string>
+
+    <string name="msg_send_email">Send email</string>
+    <string name="msg_phone_call">Make a call</string>
+    <string name="msg_whatsapp_send">Send WhatsApp</string>
+    <string name="msg_web_view">Open web site</string>
+    <string name="msg_map_view">Show place in maps</string>
+    <string name="tv_latitude_lb">Latitude</string>
+    <string name="tv_length_lb">Length</string>
+    <string name="tv_height_lb">Height</string>
+    <string name="msg_greetings">Hey folks</string>
+    <string name="msg_email_message">The reason of this email is</string>
+    <string name="msg_data">Missing data</string>
+    <string name="error">Error</string>
+
 </resources>
