@@ -89,7 +89,7 @@ class AddLugarFragment : Fragment() {
             val latitude = binding.tvLatitud.text.toString().toDouble()
             val length = binding.tvLongitud.text.toString().toDouble()
             val height = binding.tvAltura.text.toString().toDouble()
-            var lugar = Lugar(0, name, email, phone, web, latitude, length, height, "", "")
+            var lugar = Lugar("", name, email, phone, web, latitude, length, height, "", "")
             lugarViewModel.addLugar(lugar)
             Toast.makeText(requireContext(), getString(R.string.msg_added), Toast.LENGTH_LONG).show()
         } else {

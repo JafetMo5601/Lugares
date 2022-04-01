@@ -41,6 +41,12 @@
     <string name="msg_greetings">Hey folks</string>
     <string name="msg_email_message">The reason of this email is</string>
     <string name="msg_data">Missing data</string>
+    <string name="msg_firebase_add">Lugar added</string>
+    <string name="msg_firebase_delete">Lugar deleted</string>
+    <string name="msg_firebase_update">Lugar updated</string>
+    <string name="msg_firebase_no_add">ERROR: Could not add Lugar</string>
+    <string name="msg_firebase_no_delete">ERROR: Could not delete Lugar</string>
+    <string name="msg_firebase_no_update">ERROR: Could not update Lugar</string>
     <string name="error">Error</string>
 
 </resources>
