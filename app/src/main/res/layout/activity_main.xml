@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/user_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_email"
@@ -52,6 +52,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_person_add" />
+
+        <ImageButton
+            android:id="@+id/btGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_light" />
 
         <ImageButton
             android:id="@+id/btn_login"

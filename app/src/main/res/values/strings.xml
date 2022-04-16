@@ -5,8 +5,8 @@
     <string name="title_activity_main">Main</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -17,7 +17,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="msg_name">Lugar name</string>
     <string name="msg_image">Lugar image</string>
-    <string name="msg_email">Correo (xxx@abc.com)</string>
+    <string name="msg_email">Email (xxx@abc.com)</string>
     <string name="msg_phone">Phone (9999-9999)</string>
     <string name="msg_web">Web Site</string>
     <string name="msg_added">Lugar Added</string>
@@ -61,5 +61,7 @@
     <string name="msg_stop_audio">Note audio stopped</string>
     <string name="msg_uploading_audio">Uploading audio note</string>
     <string name="msg_uploading_image">Uploading image</string>
+    <string name="default_web_client_id_r" translatable="false">697577242075-7fpoq24qnqkl5fso77ieuij7vglhliss.apps.googleusercontent.com</string>
+
 
 </resources>
