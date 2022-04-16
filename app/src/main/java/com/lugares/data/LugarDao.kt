@@ -29,7 +29,7 @@ class LugarDao {
         val lugarList = MutableLiveData<List<Lugar>>()
 
         firestore.collection("lugaresApp")
-            .document()
+            .document(userCode)
             .collection("myLugares")
             .addSnapshotListener{
                 snapshot, e ->

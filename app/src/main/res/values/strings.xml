@@ -16,7 +16,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="msg_name">Lugar name</string>
-    <string name="msg_image">Place image</string>
+    <string name="msg_image">Lugar image</string>
     <string name="msg_email">Correo (xxx@abc.com)</string>
     <string name="msg_phone">Phone (9999-9999)</string>
     <string name="msg_web">Web Site</string>
@@ -48,5 +48,18 @@
     <string name="msg_firebase_no_delete">ERROR: Could not delete Lugar</string>
     <string name="msg_firebase_no_update">ERROR: Could not update Lugar</string>
     <string name="error">Error</string>
+
+    <string name="msg_record_pause">Play or pause recording</string>
+    <string name="msg_play_audio">Play audio note</string>
+    <string name="msg_delete_audio">Delete audio note</string>
+    <string name="msg_rec_stop_nota">Record or stop audio note</string>
+
+    <string name="msg_take_photo">Take photo</string>
+    <string name="msg_rotate_l">Rotate to left</string>
+    <string name="msg_rotate_r">Rotate to right</string>
+    <string name="msg_recording_audio">Recording_audio</string>
+    <string name="msg_stop_audio">Note audio stopped</string>
+    <string name="msg_uploading_audio">Uploading audio note</string>
+    <string name="msg_uploading_image">Uploading image</string>
 
 </resources>
