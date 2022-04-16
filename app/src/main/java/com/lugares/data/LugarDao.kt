@@ -29,7 +29,7 @@ class LugarDao {
         val lugarList = MutableLiveData<List<Lugar>>()
 
         firestore.collection("lugaresApp")
-            .document(userCode)
+            .document()
             .collection("myLugares")
             .addSnapshotListener{
                 snapshot, e ->
@@ -65,7 +65,7 @@ class LugarDao {
                 .collection("lugaresApp")
                 .document(userCode)
                 .collection("myLugares")
-                .document(lugar.id)
+                .document()
         }
         val set = document.set(lugar)
         set.addOnSuccessListener {
@@ -76,6 +76,8 @@ class LugarDao {
             }
 
     }
+
+//    suspend fun updateLugar(lugar: Lugar)
 
     fun deleteLugar(lugar: Lugar) {
         if (lugar.id.isNotEmpty()) {
