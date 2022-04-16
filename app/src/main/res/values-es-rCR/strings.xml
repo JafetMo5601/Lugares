@@ -12,7 +12,7 @@
     <string name="msg_firebase_no_add">ERROR: No se pudo anadir Lugar</string>
     <string name="msg_firebase_no_delete">ERROR: No se pudo borrar Lugar</string>
     <string name="msg_firebase_no_update">ERROR: No se pudo actualizar Lugar</string>
-    <string name="menu_gallery">Galeria</string>
+    <string name="menu_gallery">Mapas</string>
     <string name="tv_height_lb">Altura</string>
     <string name="hello_blank_fragment">Hola fragmento en blanco</string>
     <string name="msg_greetings">Hola amigos</string>
