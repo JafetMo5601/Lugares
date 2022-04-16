@@ -3,6 +3,7 @@ package com.lugares.ui.lugar
 import android.app.AlertDialog
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
 import android.view.*
@@ -11,6 +12,7 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.lugares.R
 import com.lugares.databinding.FragmentUpdateLugarBinding
 import com.lugares.model.Lugar
@@ -21,6 +23,8 @@ import java.util.jar.Manifest
 class UpdateLugarFragment : Fragment() {
     private lateinit var lugarViewModel: LugarViewModel
     private val args by navArgs<UpdateLugarFragmentArgs>()
+    private lateinit var mediaPlayer: MediaPlayer
+
     private var _binding: FragmentUpdateLugarBinding? = null
     private val binding get() = _binding!!
 
@@ -64,6 +68,26 @@ class UpdateLugarFragment : Fragment() {
 
         binding.btLocation.setOnClickListener {
             seeMap()
+        }
+
+        if (args.lugar.routeAudio?.isNotEmpty() == true) {
+            mediaPlayer = MediaPlayer()
+            mediaPlayer.setDataSource(args.lugar.routeAudio)
+            mediaPlayer.prepare()
+            binding.btPlay.isEnabled = true
+        } else {
+            binding.btPlay.isEnabled = false
+        }
+
+        if (args.lugar.routeImage?.isNotEmpty() == true) {
+            Glide.with(requireContext())
+                .load(args.lugar.routeImage)
+                .fitCenter()
+                .into(binding.imagen)
+        }
+
+        binding.btPlay.setOnClickListener{
+            mediaPlayer.start()
         }
 
         setHasOptionsMenu(true)
